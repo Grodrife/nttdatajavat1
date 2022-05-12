@@ -1,0 +1,23 @@
+<configuration debug="true">
+	<timestamp key="logDateVar" datePattern="dd-MM-yyyy" />
+	<appender name="LogAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>C://Users//Trabajo//Desktop//Grado//____//Dual//Workspaces//logs//tallerslf4j//logGabrielRF${logDateVar}.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<fileNamePattern>C://Users//Trabajo//Desktop//Grado//____//Dual//Workspaces//logs//tallerslf4j//logGabrielRF${logDateVar}.%i.logDual.zip</fileNamePattern>
+			<minIndex>1</minIndex>
+			<maxIndex>3</maxIndex>
+		</rollingPolicy>
+		<triggeringPolicy
+			class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<maxFileSize>50KB</maxFileSize>
+		</triggeringPolicy>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - [%method] - %msg%n</pattern>
+		</encoder>
+	</appender>
+	<root level="info">
+		<appender-ref ref="LogAppender" />
+	</root>
+</configuration>
