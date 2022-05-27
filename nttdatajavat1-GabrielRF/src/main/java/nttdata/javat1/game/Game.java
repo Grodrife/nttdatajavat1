@@ -145,21 +145,6 @@ public class Game {
 	}
 
 	/**
-	 * Método para escribir el nombre del jugador
-	 * 
-	 * @param Scanner sc
-	 * @return String con el nombre del jugador
-	 */
-	public String writeName(Scanner sc) {
-		String playerName;
-		do {
-			System.out.print("Introduzca su nombre (3 letras)\n");
-			playerName = sc.nextLine();
-		} while (playerName.length() != 3 || !StringUtils.isAlpha(playerName));
-		return playerName;
-	}
-
-	/**
 	 * Método para zona 1
 	 * 
 	 * @return número de la zona por la que sale la bola de la zona 1
@@ -229,6 +214,21 @@ public class Game {
 		}
 
 		return zone;
+	}
+
+	/**
+	 * Método para escribir el nombre del jugador
+	 * 
+	 * @param Scanner sc
+	 * @return String con el nombre del jugador
+	 */
+	public String writeName(Scanner sc) {
+		String playerName;
+		do {
+			System.out.print("Introduzca su nombre (3 letras)\n");
+			playerName = sc.nextLine();
+		} while (playerName.length() != 3 || !StringUtils.isAlpha(playerName));
+		return playerName;
 	}
 
 	/**
