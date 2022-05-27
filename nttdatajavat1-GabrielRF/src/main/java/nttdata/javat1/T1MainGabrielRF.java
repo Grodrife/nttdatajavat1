@@ -71,13 +71,13 @@ public class T1MainGabrielRF {
 	 */
 	public static boolean repeatGame(Scanner sc) {
 
-		int option;
+		String option;
 
 		do {
 			System.out.println("¿Quieres volver a jugar? (SI = 1  // NO = 0)");
-			option = sc.nextInt();
-		} while (option > 1 || option < 0);
-		return option == 1 ? true : false;
+			option = sc.next();
+		} while (!option.equals("1") && !option.equals("0"));
+		return option.equals("1") ? true : false;
 
 	}
 
@@ -120,13 +120,13 @@ public class T1MainGabrielRF {
 	 */
 	public static boolean knowRanking(Scanner sc) {
 
-		int num;
+		String option;
 		do {
 			System.out.println("¿Quieres conocer el ranking final? (SI = 1 // NO = 0)");
-			num = sc.nextInt();
-		} while (num > 1 || num < 0);
+			option = sc.next();
+		} while (!option.equals("1") && !option.equals("0"));
 
-		return num == 1 ? true : false;
+		return option.equals("1") ? true : false;
 	}
 
 	/**
